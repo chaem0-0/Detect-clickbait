@@ -1,2 +1,28 @@
-# Detectclickbait
-IN Generative AI  Project Class
+# 낚시성 기사 판별 서비스
+기사의 제목과 본문을 입력하여 낚시성 기사의 여부를 확인할 수 있는 서비스  
+URL을 입력하거나 기사의 제목과 본문을 직접 입력하여 낚시성 기사 여부를 판별할 수 있다.  
+낚시성 기사인 경우, 낚시성 기사인 이유와 제목 관련 기사 3개를 검색하여 제공한다.  
+비낚시성 기사인 경우, 기사의 본문을 요약하여 제공한다.  
+서비스 흐름도는 아래와 같다.
+![image](https://github.com/user-attachments/assets/daf28828-3a9d-4270-b5c7-62934dad56d2)
+
+-----------------------------------------------------------------------------------
+
+### 데이터셋
+사용 데이터: AI Hub의 낚시성 기사 탐지 데이터  
+newsTitle, newsContent, clickbaitClass만 추출하여 사용  
+낚시성 기사인 경우 - clickbaitClass:0
+비낚시성 기사인 경우 - clickbaitClass:1
+
+### 모델 학습
+Llama 3.1 8B model을 준비된 데이터 셋을 활용하여 finetunning하여 낚시성 기사 여부 판별에 활용  
+분류가 아닌 생성의 형태를 활용하여 낚시성 기사인지 판별  
+LoRA, Bits and Bytes 4bit 양자화, TRL의 SFTtrainer를 활용하여 학습을 최적화  
+colab A100 환경에서 학습 진행  
+성능 비교  
+분류 모델 대비 생성 모델이 어느 정도의 성능을 가졌는지 비교하여 봄. 결과는 아래와 같다.
+![image](https://github.com/user-attachments/assets/61823f8a-4f25-41be-a4fc-9fa0eaf67385)
+
+비교 결과 생성 모델의 성능이 뒤떨어지지 않는 다는 것을 확인 후, 이후 확장성 등의 이유로 Llama 모델 선택  
+
+이후 학습량을 조절하며 추가적인 성능 비교를 진행 함
