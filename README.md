@@ -5,6 +5,7 @@
 <br>
 
 서비스 흐름은 아래와 같다.  
+
 ![image](https://github.com/user-attachments/assets/daf28828-3a9d-4270-b5c7-62934dad56d2)
 <br>
 <br>
