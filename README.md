@@ -13,12 +13,12 @@ URL을 입력하거나 기사의 제목과 본문을 직접 입력하여 낚시�
 - **비낚시성 기사 요약**: 요약 모델을 활용해 간결한 본문 요약 생성  
 <br>
 
-서비스 흐름도는 아래와 같다.  
+- 서비스 흐름도는 아래와 같다.  
 ![image](https://github.com/user-attachments/assets/daf28828-3a9d-4270-b5c7-62934dad56d2)
 <br>
 <br>
 
-## 📌 주요 기능
+## 🗂️ 주요 기능
 
 -  뉴스 제목 및 본문에 대한 낚시성 여부 판별  
 -  AI 모델 기반 기사 분류 (Clickbait / Not Clickbait)  
