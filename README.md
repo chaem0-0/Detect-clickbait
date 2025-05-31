@@ -1,19 +1,22 @@
 # 낚시성 기사 판별 서비스
+## 📘 소개  
 기사의 제목과 본문을 입력하여 낚시성 기사의 여부를 확인할 수 있는 서비스  
 URL을 입력하거나 기사의 제목과 본문을 직접 입력하여 낚시성 기사 여부를 판별할 수 있다.  
 낚시성 기사인 경우, 낚시성 기사인 이유와 제목 관련 기사 3개를 검색하여 제공한다.  
 비낚시성 기사인 경우, 기사의 본문을 요약하여 제공한다. 
+<br>
+<br>
 
 ## 🎯 목표
 - **낚시성 기사 판별**: Fine-Tuning된 모델을 사용해 기사 분류  
 - **낚시성 이유 생성**: RAG를 활용해 외부 정보를 바탕으로 설명 생성  
 - **비낚시성 기사 요약**: 요약 모델을 활용해 간결한 본문 요약 생성  
-
+<br>
 
 서비스 흐름도는 아래와 같다.  
 ![image](https://github.com/user-attachments/assets/daf28828-3a9d-4270-b5c7-62934dad56d2)
-
-
+<br>
+<br>
 
 ## 📌 주요 기능
 
@@ -21,7 +24,8 @@ URL을 입력하거나 기사의 제목과 본문을 직접 입력하여 낚시�
 -  AI 모델 기반 기사 분류 (Clickbait / Not Clickbait)  
 -  결과 시각화 및 설명 제공  
 - 🛠 RESTful API 제공 (추후 웹 UI 연동 가능)  
-
+<br>
+<br>
 
 ## ⚙️ 기술 스택
 
@@ -30,14 +34,15 @@ URL을 입력하거나 기사의 제목과 본문을 직접 입력하여 낚시�
 | Backend | Python, FastAPI |
 | AI/ML | Hugging Face Transformers (BERT / LLaMA 등), PyTorch |
 | Data | AIHub Clickbait Detection Dataset (JSON) |
-
+<br>
+<br>
 
 ## 🧾 데이터셋
 사용 데이터: AI Hub의 낚시성 기사 탐지 데이터  
 newsTitle, newsContent, clickbaitClass만 추출하여 사용  
 낚시성 기사인 경우 - clickbaitClass:0  
 비낚시성 기사인 경우 - clickbaitClass:1
-
+<br>
 
 예시
 ```
@@ -47,6 +52,8 @@ newsTitle, newsContent, clickbaitClass만 추출하여 사용
     "clickbaitClass": 0
 }
 ```
+<br>
+<br>
 
 ## 🔬 학습 및 추론 방식 (BERT vs LLaMA)
 
@@ -69,7 +76,8 @@ newsTitle, newsContent, clickbaitClass만 추출하여 사용
 - 다음 토큰으로 `"Clickbait"` 또는 `"Not Clickbait"` 생성  
 - 생성된 텍스트를 파싱하여 결과 판단  
 
-
+<br>
+<br>
   
 ## 📊 모델 성능 비교  
 분류 모델 대비 생성 모델이 어느 정도의 성능을 가졌는지 비교
@@ -86,6 +94,8 @@ newsTitle, newsContent, clickbaitClass만 추출하여 사용
 
 
 이후 학습량을 조절하며 추가적인 성능 개선 진행
+<br>
+<br>
 
 ## ❓ 왜 LLaMA를 선택했는가?
 
