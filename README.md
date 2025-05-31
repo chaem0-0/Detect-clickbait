@@ -13,13 +13,14 @@ URL을 입력하거나 기사의 제목과 본문을 직접 입력하여 낚시�
 서비스 흐름도는 아래와 같다.  
 ![image](https://github.com/user-attachments/assets/daf28828-3a9d-4270-b5c7-62934dad56d2)
 
------------------------------------------------------------------------------------
+
+
 ## 📌 주요 기능
 
-- 🧠 뉴스 제목 및 본문에 대한 낚시성 여부 판별  
-- 🗂️ AI 모델 기반 기사 분류 (Clickbait / Not Clickbait)  
-- 📊 결과 시각화 및 설명 제공  
-- 🛠️ RESTful API 제공 (추후 웹 UI 연동 가능)  
+-  뉴스 제목 및 본문에 대한 낚시성 여부 판별  
+-  AI 모델 기반 기사 분류 (Clickbait / Not Clickbait)  
+-  결과 시각화 및 설명 제공  
+- 🛠 RESTful API 제공 (추후 웹 UI 연동 가능)  
 
 
 ## ⚙️ 기술 스택
@@ -49,10 +50,10 @@ newsTitle, newsContent, clickbaitClass만 추출하여 사용
 
 ## 🔬 학습 및 추론 방식 (BERT vs LLaMA)
 
-Llama 3.1 8B model을 준비된 데이터 셋을 활용하여 finetunning하여 낚시성 기사 여부 판별에 활용  
-분류가 아닌 생성의 형태를 활용하여 낚시성 기사인지 판별  
-LoRA, Bits and Bytes 4bit 양자화, TRL의 SFTtrainer를 활용하여 학습을 최적화  
-colab A100 환경에서 학습 진행
+- Llama 3.1 8B model을 finetunning하여 낚시성 기사 여부 판별에 활용  
+- 분류가 아닌 생성의 형태를 활용하여 낚시성 기사인지 판별  
+- LoRA, Bits and Bytes 4bit 양자화, TRL의 SFTtrainer를 활용하여 학습을 최적화  
+- colab A100 환경에서 학습 진행
 
 ### ✅ BERT  
 - `title + content`를 tokenizer로 인코딩 후 입력  
