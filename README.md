@@ -71,7 +71,7 @@ newsTitle, newsContent, clickbaitClass만 추출하여 사용
 
 
   
-### 📊 모델 성능 비교  
+## 📊 모델 성능 비교  
 분류 모델 대비 생성 모델이 어느 정도의 성능을 가졌는지 비교
 
 결과는 아래와 같다.  
