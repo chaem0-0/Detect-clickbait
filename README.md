@@ -32,7 +32,7 @@ URL을 입력하거나 기사의 제목과 본문을 직접 입력하여 낚시�
 | Data | AIHub Clickbait Detection Dataset (JSON) |
 
 
-## 데이터셋
+## 🧾 데이터셋
 사용 데이터: AI Hub의 낚시성 기사 탐지 데이터  
 newsTitle, newsContent, clickbaitClass만 추출하여 사용  
 낚시성 기사인 경우 - clickbaitClass:0  
