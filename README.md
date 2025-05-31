@@ -39,12 +39,13 @@ newsTitle, newsContent, clickbaitClass만 추출하여 사용
 
 
 예시
-```json
+```
 {
     "newsTitle": "연합뉴스 포털 노출중단 위기에 노조 \"최악의 참사\"",
     "newsContent": "포털 뉴스제휴평가위원회제휴평가위가 연합뉴스에 한 달 포털 노출중단 제재 및 재평가퇴출평가에 해당하는 벌점을 의결하자 전국언론노조 연합뉴스 지부연합뉴스 노조가 입장을 냈다 (생략)",
     "clickbaitClass": 0
 }
+```
 
 ## 🔬 학습 및 추론 방식 (BERT vs LLaMA)
 
